@@ -1,0 +1,23 @@
+Triigers=
+
+1. On Contact to update the Account Name field with contact LastName concatenated
+   in the end. Example: if you Create a Contact whose FirstName='Sarthak' and 
+   LastName='Saxena' and Account Name ='Tata' then Account Name must become 
+	'TataSaxena'. (Complete next part)
+	
+   => Now update the above trigger to delete the last name  from the Account field 
+    when a Contact is deleted without  deleting the other last name 
+	
+2. On Opportunity to alert the user when an opportunity is being closed with no 
+	Opportunity line items in it
+
+3. On opportunity to add all the contacts having the same Account as Opportunity-Account
+	into the Opportunity "Contact roles"
+   Example -: Account: TATA have 3 contacts: abc,def,ghi. Then while creating an Opportunity
+    for TATA add abc,def,ghi to Opportunity Contact Roles.
+
+4. Trigger to stop add more than 2 Opportunity line Items records in an Opportunity.
+
+
+
+	

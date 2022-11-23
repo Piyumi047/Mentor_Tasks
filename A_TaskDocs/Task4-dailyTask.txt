@@ -1,0 +1,133 @@
+
+ 
+ Create the following Custom Objects along with the details as mentioned below: 
+ 
+EMPLOYEE 
+     
+ 
+Sr. No. Field Name Field Type Description 
+1 Employee ID Auto Number EMP-{000000} 
+2 First Name Text Mandatory 
+3 Last Name Text(255) Mandatory 
+4 Full Name Formula (Text) Computed from First Name and Last Name fields 
+5 Date of Birth Date Mandatory 
+6 Age Formula (Number) Compute the Age based on entered DOB 
+7 Address Text (100)   
+8 Street Text (100)   
+9 City Picklist 
+(Hyderabad, Guntur, Bhopal, Surat, Gandhi Nagar, Mumbai, 
+Pune) 
+Picklist dependent on State i.e. if Maharashtra is selected as 
+the State only Mumbai and Pune show up in the City picklist 
+10 Zip Text(6) Mandatory 
+11 State Picklist Values: (AP, MP, Maharashtra, Gujarat) – Mandatory 
+12 Education Picklist BE, ME, B Tech., MCA, BCA, B Sc. 
+13 Annual CTC Number (10, 2)   
+14 Salary Credited Till Date Roll Up Summary SUM(Gross Salary) 
+15 Is Active Checkbox Default: Checked 
+16 Status Formula (Text) 
+Provide the following color coding depending upon the status 
+of the Employee 
+Green  – Employee is active 
+Yellow – Employee is active but on Notice Period 
+Red  – Employee is inactive 
+(Hint: Use “/img/samles/color_red.gif” and IMAGE function) 
+17 Is on Notice Period Checkbox Default – TRUE 
+18 Date of Joining Date Required 
+19 Last Working Day  Formula (Date) Calculated as Resignation Date + 60 days 
+20 Manager Lookup (Employee)   
+21 Resignation Date Date Enter the date if  Notice Period checked to true 
+22 Department Lookup 
+(Department) 
+
+
+DEPARTMENT 
+     
+ 
+Sr. No. Field Name Field Type Description 
+1 Department ID Auto Number DEP-{000000} 
+2 Department Name Text(80)   
+3 Description Text Area   
+  
+
+  
+ 
+   
+SALARY DETAILS 
+     
+ 
+ Sr. No. Field Name Field Type Description  
+ 1 Salary ID Auto Number Format: SAL-{000000}  
+ 2 Basic Number(10, 2) Mandatory  
+ 3 HRA Number(10, 2) Mandatory  
+ 4 Special Allowance Number(10, 2) Mandatory  
+ 5 PF Deduction Number(10, 2) Mandatory  
+ 5 Total Earnings Formula (Number) Basic + HRA + Special Allowance  
+ 6 Gross Salary Formula (Number) Total Earnings - PF  
+ 7 Salary Credit Date Date Mandatory  
+ 8 Bank Account Number Text (25) Mandatory  
+ 9 Bank Details Text (100) Mandatory  
+ 10 Mode of Payment Picklist RTGS, NEFT, Cheque, Cash  
+ 11 Credited To Master-Detail(Employee) 
+  
+ 
+ 
+ 
+ 
+ Create Custom Tabs for the following Objects: 
+ - Department 
+ - Employee 
+ 
+ Create a Related List for Salary Details which would be shown on the detail page of an Employee. 
+Following columns should be shown on the Related List: 
+ - Salary ID 
+ - Total Earnings 
+ - Gross Salary 
+ - Salary Credit Date 
+ - Bank Account Number 
+ - Mode of Payment 
+ - Bank Details 
+ 
+- Create a Custom Application named “Payroll System” having the following Tabs – Employee and 
+Department. The Landing tab for the App should be Employee. Provide an appropriate logo for the App. 
+
+Customize the Page layout for Employee to have the following  
+a. Organize the fields and group them into the following sections – Employee Details, 
+Address Details, Salary Details, Department Details 
+b.Only the following Related Lists should be visible – Salary Information with the following 
+columns in the said order (Salary Credit Date, Basic, HRA, Special Allowance, Total 
+Earnings, Gross Salary, Mode of Payment) 
+c. Layout the fields in 2 columns 
+
+
+ Customize the Salary Page Layout to have the following 
+a. Organize the Salary page into the following sections – Payment Details, Salary Deduction 
+Details, Bank Details, Salary Credit Details 
+b. Layout the fields in 2 columns 
+
+ Customize the Department Page Layout to have the following 
+a. Organize the Department page into the following sections – Department Details 
+b. Layout the fields in 1 column 
+
+ Create List Views to display the following 
+- All Active Employees (First Name, Last Name,  Designation, Date of Joining, Last Working 
+Day, ) 
+- All Employees on Notice Period 
+- All Inactive Employees 
+
+  Validation rule : 
+- If notice period is checked to true, resignation date cannot be null. 
+- Last working date cannot be greater than joining date. 
+- Bank Account number once set cannot be changed. 
+- Bank account details cannot be null. 
+
+   Create 2 record types for an employee – Technical and Non-Technical. Depending upon the selection of 
+the type of employee selected, the list of values in the Skills or Expertise fields should change 
+a. Technical – C#, Java, Apex, Salesforce, Force.com, QA, Dot Net, PHP (All values should 
+appear in an alphabetically sorted order.) 
+b. Non-Technical – Project Management, Operations, HR, Project Planning (All values 
+should appear in an alphabetically sorted order.) 
+
+
+
+

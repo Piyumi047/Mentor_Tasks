@@ -1,0 +1,13 @@
+Triigers=
+
+1. On Account Create a "Default" Contact every time an account is created.
+
+apex:createContact
+
+2. On Opportunity check if user tries to enter past close date at time of
+    creation or updation show message "please enter future close date.
+
+3. On Contact to update the Account Name field with contact LastName concatenated
+   in the end. Example: if you Create a Contact whose FirstName='Sarthak' and 
+   LastName='Saxena' and Account Name ='Tata' then Account Name must become 
+	'TataSaxena'.

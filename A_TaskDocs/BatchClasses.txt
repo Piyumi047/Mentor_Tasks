@@ -1,0 +1,13 @@
+Apex -
+1.Write a Batch Class to delete accounts created in 10 days before.
+2.Schedule the above class to run every day at 12:00 pm.
+
+3.Create a Batch class to create 5 new Opportunities daily.
+4.Schedule above class to run 4 times every day at afterevery 6 hours.
+5.Write a script to delete the above schedule job.
+
+6.Create a Batch to update the Account "Count" field (create this field) 
+	with all the contacts related to that Account.
+
+
+
